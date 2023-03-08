@@ -16,6 +16,7 @@
   }
 
   header {
+    /* background-color: rgb(45, 216, 29); */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -159,7 +160,7 @@ marquee {
 }
 
 #languages ul {
-  background-color: bisque ;
+  /* background-color: bisque ; */
   text-align: left;
   font-size: 13px;
   list-style: none;
@@ -239,7 +240,7 @@ marquee {
 }
 
 #interests ul {
-  background-color: rgb(217, 124, 11);
+  /* background-color: rgb(217, 124, 11); */
   list-style: none;
   padding: 0;
   margin: 0;
