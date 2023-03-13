@@ -343,6 +343,13 @@ footer {
       margin: 0;
       text-align: center;
   }
+  body {
+    font-size: 15px;
+    line-height: 1.5;
+    background-color: burlywood;
+    color: #000000 ;
+    text-align: left;
+  }
 }
 
 /* Styles pour les écrans de taille moyenne */
