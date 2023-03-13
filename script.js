@@ -1,12 +1,13 @@
 
 const profileImage = document.querySelector('.profile-picture img');
 
-const menuIcon = document.querySelector('.menu-icon');
+const burgerMenu = document.querySelector('.burger-menu');
 const menu = document.querySelector('.menu');
 
-menuIcon.addEventListener('click', function() {
+burgerMenu.addEventListener('click', () => {
   menu.classList.toggle('active');
 });
+
 
 // afficher ou masquer le bouton en fonction de la position de l'utilisateur
 window.onscroll = function() {scrollFunction()};
