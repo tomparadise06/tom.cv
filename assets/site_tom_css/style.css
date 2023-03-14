@@ -333,7 +333,7 @@ footer {
   header {
       flex-direction: column;
   }
-  nav {
+  /* nav {
       margin-top: 20px;
   }
   nav ul {
@@ -345,7 +345,7 @@ footer {
       display: block;
       margin: 0;
       text-align: center;
-  }
+  } */
   body {
     font-size: 15px;
     line-height: 1.5;
