@@ -160,7 +160,7 @@ marquee {
 }
 
 #languages ul {
-  /* background-color: bisque ; */
+  background-color: bisque ;
   text-align: left;
   font-size: 13px;
   list-style: none;
@@ -170,7 +170,10 @@ marquee {
 
 #languages li {
   margin-bottom: 20px;
-  
+  /* display: flex;
+  flex-direction: column;
+  align-items: normal;
+  text-align: left; */
 }
 
 #languages p {
@@ -348,6 +351,20 @@ footer {
     line-height: 1.5;
     background-color: burlywood;
     color: #000000 ;
+    text-align: left;
+  }
+
+  #languages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+  }
+
+  #experience {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: left;
   }
 }
