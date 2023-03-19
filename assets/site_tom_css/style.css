@@ -84,7 +84,7 @@
   }
   
   footer a {
-    display: inline-block;
+    /* display: inline-block; */
     padding: 10px 20px;
     /* color: #fff;
     border-radius: 4px;
@@ -333,6 +333,9 @@ footer {
   header {
       flex-direction: column;
   }
+  footer {
+size: 2;
+  }
   /* nav {
       margin-top: 20px;
   }
@@ -347,7 +350,7 @@ footer {
       text-align: center;
   } */
   body {
-    font-size: 15px;
+    font-size: 10px;
     line-height: 1.5;
     background-color: burlywood;
     color: #000000 ;
