@@ -40,28 +40,6 @@
     font-size: 2.5em;
     margin: 0;
   }
-
-  nav ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  nav li {
-    margin: 0 20px;
-  }
-  
-  nav a {
-    color: #080808;
-    font-weight: 100;
-    text-decoration: none;
-    transition: color 0.2s ease-in-out;
-  }
-  
-  nav a:hover {
-    color: #00235B;
-  }
   
   section {
     margin-bottom: 40px;
@@ -257,27 +235,12 @@ marquee {
   margin: 0;
 }
 
-#myBtn {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 30px;
-  z-index: 99;
-  cursor: pointer;
-}
-
-#myBtn:hover {
-  opacity: 0.7;
-}
-
-
-
 /* Styles de base pour tous les appareils */
 body  {
   font-family: Arial, sans-serif;
   font-size: 15px;
   line-height: 1.5;
-  background-color: rgb(255, 255, 255);
+  background-color: burlywood;
   color: #000000 ;
 }
 .copyright p {
@@ -296,21 +259,7 @@ h1 {
   margin: 0;
 }
 
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
 
-nav li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-}
 
 main {
   padding: 20px;
@@ -333,19 +282,7 @@ footer {
   header {
       flex-direction: column;
   }
-  /* nav {
-      margin-top: 20px;
-  }
-  nav ul {
-      display: block;
-      margin: 0;
-      padding: 0;
-  }
-  nav li {
-      display: block;
-      margin: 0;
-      text-align: center;
-  } */
+ 
   body {
     font-size: 15px;
     line-height: 1.5;
@@ -485,7 +422,7 @@ nav {
   }
 }
 
-/* LOADER SYMBOL HTML  */
+/* LOADER SYMBOL HTML 
   
 .loader{
 	position: relative;
@@ -533,7 +470,5 @@ nav {
 	right: 10px;
 	bottom: 10px;
 	/* background: #ff00e0; */
-	border-radius: 50%;
-}
-
-
+	/* border-radius: 50%;
+} */ 

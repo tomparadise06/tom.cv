@@ -1,33 +1,6 @@
 
 const profileImage = document.querySelector('.profile-picture img');
 
-const burgerMenu = document.querySelector('.burger-menu');
-const menu = document.querySelector('.menu');
-
-burgerMenu.addEventListener('click', () => {
-  menu.classList.toggle('active');
-});
-
-
-// afficher ou masquer le bouton en fonction de la position de l'utilisateur
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    document.getElementById("myBtn").style.display = "block";
-  } else {
-    document.getElementById("myBtn").style.display = "none";
-  }
-}
-
-// faire remonter la page en cliquant sur le bouton
-document.getElementById("myBtn").addEventListener("click", function() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-});
-
-
-
 
 profileImage.addEventListener('mouseover', () => {
   profileImage.style.transform = 'scale(1.2)';
@@ -56,3 +29,5 @@ window.onload = function() {
   script.type = "text/javascript";
   document.head.appendChild(script);
 }
+
+
