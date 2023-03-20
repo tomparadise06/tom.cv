@@ -84,7 +84,7 @@
   }
   
   footer a {
-    /* display: inline-block; */
+    display: inline-block;
     padding: 10px 20px;
     /* color: #fff;
     border-radius: 4px;
@@ -160,7 +160,7 @@ marquee {
 }
 
 #languages ul {
-  background-color: bisque ;
+  /* background-color: bisque ; */
   text-align: left;
   font-size: 13px;
   list-style: none;
@@ -277,7 +277,7 @@ body  {
   font-family: Arial, sans-serif;
   font-size: 15px;
   line-height: 1.5;
-  background-color: burlywood;
+  background-color: rgb(255, 255, 255);
   color: #000000 ;
 }
 .copyright p {
@@ -333,9 +333,6 @@ footer {
   header {
       flex-direction: column;
   }
-  footer {
-size: 2;
-  }
   /* nav {
       margin-top: 20px;
   }
@@ -350,7 +347,7 @@ size: 2;
       text-align: center;
   } */
   body {
-    font-size: 10px;
+    font-size: 15px;
     line-height: 1.5;
     background-color: burlywood;
     color: #000000 ;
@@ -489,3 +486,53 @@ nav {
   }
 }
 
+/* LOADER SYMBOL HTML  */
+  
+.loader{
+	position: relative;
+	width: 100px;
+	height: 100px;
+	border-radius: 	50%;
+	background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+	animation: animate 0.5s linear infinite;
+}
+
+@keyframes animate{
+	0%{transform: rotate(0deg);}
+	100%{transform: rotate(360deg);}
+}
+
+.loader span{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 	50%;
+	background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+}
+
+.loader span:nth-child(1){
+	filter: blur(5px);
+}
+
+.loader span:nth-child(2){
+	filter: blur(10px);
+}
+
+.loader span:nth-child(3){
+	filter: blur(25px);
+}
+
+.loader span:nth-child(4){
+	filter: blur(50px);
+}
+
+.loader:after{
+	content: '';
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	right: 10px;
+	bottom: 10px;
+	background: #240229;
+	border-radius: 50%;
+}
