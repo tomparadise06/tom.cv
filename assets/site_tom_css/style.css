@@ -14,7 +14,7 @@
     max-width: 800px;
     
   }
-  nav{
+  /* nav{
     display: flex;
     justify-content: center;
     height: 80px;
@@ -23,8 +23,8 @@
     align-items: center;
     padding: 0 200px 0 200px;
     flex-wrap: wrap;
-  }
-  nav .logo{
+  } */
+  /* nav .logo{
     color: #fff;
     font-size: 35px;
     font-weight: 600;
@@ -58,24 +58,24 @@
     font-size: 22px;
     cursor: pointer;
     display: none;
-  }
+  } */
   input[type="checkbox"]{
     display: none;
   }
   @media (max-width: 1000px){
-    nav{
+    /* nav{
       padding: 0 40px 0 50px;
-    }
+    } */
   }
   @media (max-width: 920px) {
-    nav .menu-btn i{
+    /* nav .menu-btn i{
       display: flex;
       justify-content: center;
-    }
+    } */
     #click:checked ~ .menu-btn i:before{
       content: "\f00d";
     }
-    nav ul{
+    /* nav ul{
       list-style: none;
       position: fixed;
       top: 80px;
@@ -86,29 +86,29 @@
       text-align: center;
       display: flex;
       transition: all 0.3s ease;
-    }
+    } */
     #click:checked ~ ul{
       left: 0;
     }
-    nav ul li{
+    /* nav ul li{
       width: 100%;
       margin: 40px 0;
-    }
-    nav ul li a{
+    } */
+    /* nav ul li a{
       width: 100%;
       margin-left: -100%;
       display: block;
       font-size: 20px;
       transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    }
+    } */
     #click:checked ~ ul li a{
       margin-left: 0px;
     }
-    nav ul li a.active,
+    /* nav ul li a.active,
     nav ul li a:hover{
       background: none;
       color: rgb(255, 89, 0);
-    }
+    } */
   }
   header {
     /* background-color: rgb(45, 216, 29); */
@@ -335,7 +335,7 @@ body  {
   font-family: Arial, sans-serif;
   font-size: 15px;
   line-height: 1.5;
-  background-color: burlywood;
+  /* background-color: burlywood; */
   color: #000000 ;
 }
 .copyright p {
@@ -410,9 +410,9 @@ footer {
 
 /* Styles pour les grands écrans */
 @media (min-width: 1025px) {
-  nav {
+  /* nav {
       margin-left: auto;
-  }
+  } */
 }
 
 @keyframes blink {

@@ -10,16 +10,16 @@ profileImage.addEventListener('mouseout', () => {
   profileImage.style.transform = 'scale(1)';
 });
 
-navLinks.forEach((link) => {
-  link.addEventListener('click', (event) => {
-    event.preventDefault();
-    const target = event.target.getAttribute('href');
-    const section = document.querySelector(target);
-    const yOffset = -80;
-    const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
-    window.scrollTo({top: y, behavior: 'smooth'});
-  });
-});
+// navLinks.forEach((link) => {
+//   link.addEventListener('click', (event) => {
+//     event.preventDefault();
+//     const target = event.target.getAttribute('href');
+//     const section = document.querySelector(target);
+//     const yOffset = -80;
+//     const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+//     window.scrollTo({top: y, behavior: 'smooth'});
+//   });
+// });
 
 
 // Charger la bibliothèque JavaScript de Font Awesome
