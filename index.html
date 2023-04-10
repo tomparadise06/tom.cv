@@ -1,186 +1,575 @@
+
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Site Web - Tom MERGUI </title>
-    <link rel="shortcut icon" type="image/png" href="/assets/wave art logo.ico"/>
-    <link rel="stylesheet" href="assets/site_tom_css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icon-css/css/flag-icon.min.css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
-        integrity="sha384-Z7FsJyIR2uF7W8Hv2Tz7LuENx6nZALHjOHsRdJz7eVLs6sdrn0mIthcPmIgKyniw" 
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" 
-        integrity="sha512-eEZ/m4HMvYnRnpGYZLlJxhX9NlwnFt7q3tOFM6KgCZltM+Hb7mWNTzjKb7XuhilJOkmV7dWmroPgnjVzCZg1Yw==" 
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://kit.fontawesome.com/fa9082c207.js" crossorigin="anonymous" ></script>
-    <meta name="description" content="Site Web de Tom MERGUI, étudiant à la MANU - Ecole Supérieure des Métiers du Numérique.">
-  </head>
-  <body>
-    <header>
-      
-      <div class="profile-picture">
-        <img src="assets/site_tom_images/photo_profil_cv.jpg"  title="TOM MERGUI" alt="Photo de profil de Tom MERGUI">
-        <br>
-        <br>
-        <h2 style="text-align: center;"> Tom MERGUI</h2>
-      </div>
-      <div class="profile-info">
-        <p>Etudiant | <br> La MANU - Ecole Supérieure des Métiers du Numérique</p>
-        <p><img src="assets/site_tom_images/emplacement.png"  width="30px"  alt="Icône emplacement"> Amiens</p>
-      </div>
-      <!-- <nav>
-        <input type="checkbox" id="click">
-        <label for="click" class="menu-btn">
-                    <i class="fas fa-bars"></i>
-                  </label>
-        <ul>
-          <li><a class="active" href="#">Acceuil</a></li>
-          <li><a href="#experience">Expérience</a></li>
-          <li><a href="#skills">Compétences</a></li>
-          <li><a href="#education">Formation</a></li>
-          <li><a href="#languages">Langues</a></li>
-          <li><a href="#interests">Centres d'intérêt</a></li>
-          <li><a href="https://portfoliotommergui80.my.canva.site/" target="_blank">PortFolio</a></li>
-        </ul>
-      </nav> -->
-    </header>
-    
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./assets/site_tom_css/style.css" />
+        <link rel="stylesheet" href="./assets/site_tom_css/mediaQueries.css" />
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <title>Tom Mergui~</title>
+    </head>
+    <body>
+        <section id="app">
+            <nav>
+                <div class="nav-small nav-contact"></div>
+                <div class="nav-sections">
+                    <a href="#home" class="enabled">Accueil</a>
+                    <a href="#profile" class="enabled">Profil</a>
+                    <a href="#skills-redirect" class="enabled">Compétences</a>
+                    <a href="#career-path-redirect" class="enabled">Parcours</a>
+                    <a href="#portfolio-redirect" class="enabled">Portfolio</a>
+                    <a href="#contact" class="enabled">Contact</a>
+                </div>
+                <div class="nav-small nav-button">
+                    <a
+                        href="./assets/site_tom_docs/CV TOM MERGUI.pdf"
+                        download="CV TOM MERGUI.pdf"
+                        class="dl-button"
+                        >Télécharger CV
+                    </a>
+                </div>
+            </nav>
+            <header id="home">
+                <section class="container">
+                    <div class="header-body">
+                        <div class="header-info">
+                            <h1>Tom Mergui</h1>
+                            <p class="header-desc">
+                                Étudiant de 1ère année en Web & Application Developer à La Manu  - <br> Ecole
+                                Supérieure des Métiers du Numérique
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </header>
 
-    <div class="social-media">
-      <a href="https://www.facebook.com/profile.php?id=100012160721462" target="_blank" class="facebook-btn">
-        <img src="assets/site_tom_images/facebook.png" title="Facebook">
-      </a>
-      <a href="https://www.instagram.com/tom.paradise03/" target="_blank" class="instagram-btn">
-        <img src="assets/site_tom_images/insta.png" title="Instagram">
-      </a>
-      <a href="https://twitter.com/paradiseof80" target="_blank" class="twitter-btn">
-        <img src="assets/site_tom_images/twitter.png" title="Twitter">
-      </a>
-      <a href="https://github.com/Paradise2880" target="_blank" class="github-btn">
-        <img src="assets/site_tom_images/github.png" title="Github">
-      </a>
-  
-      <a href="//www.linkedin.com/in/tom-m-587221205/" target="_blank" class="linkedin-btn">
-        <img src="assets/site_tom_images/linkedin.png" title="Linkedin">
-      </a>
-  
-      <a href="https://linktr.ee/TomParadise" target="_blank" class="linktree-btn">
-        <img src="assets/site_tom_images/linktree-seeklogo.com.svg" title="Linktree">
-      </a>
-  
-      </div>
-      
-      
+            <main>
+                <section class="container profile-container">
+                    <section id="profile">
+                        <section-title
+                            :title="'Profil'"
+                            :desc="'À propos de moi'"
+                            data-aos="fade-up"
+                            data-aos-duration="1000"
+                        ></section-title>
 
-    <div class="bandeau-defilant">
-      <marquee behavior="scroll" direction="right"> <i class="fas fa-exclamation-triangle blinking-icon"></i>
+                        <div class="profile-section">
+                            <img
+                                src="./assets/site_tom_images/photo_profil_cv.jpg"
+                                alt="Photo de profil"
+                                class="profile-pic"
+                                data-aos="fade-up"
+                                data-aos-duration="1000"
+                            />
+                            <div
+                                class="profile-info"
+                                data-aos="fade-up"
+                                data-aos-duration="1000"
+                            >
+                                <div class="profile-desc">
+                                    <p>
+                                        Je suis un étudiant passionné par les nouvelles technologies et la création de contenus pour les médias numériques. En première année de <span
+                                            class="desc-highlight"
+                                            >Web & Application Developer</span
+                                        >. J'ai d'abord intégré un
+                                        <span class="desc-highlight"
+                                            >BUT Informatique</span
+                                        >
+                                        à l'IUT d'Amiens (80) pendant un an,
+                                        mais cela ne m'a pas plu car il n'y
+                                        avait pas beaucoup de design. J'ai donc
+                                        par la suite intégré le
+                                        <span class="desc-highlight"
+                                            >Bachelor Web Design UI - UX &
+                                            Développement Web</span
+                                        >
+                                        à La Manu, école supérieure des métiers
+                                        du numérique, à Amiens, là où j'exerce à
+                                        la fois le développement
+                                        <span class="desc-highlight"
+                                            >Back-End</span
+                                        >,
+                                        <span class="desc-highlight"
+                                            >Front-End</span
+                                        >, ainsi que le
+                                        <span class="desc-highlight"
+                                            >Design</span
+                                        >.
+                                    </p>
+                                    <div class="info-item">
+                                        <div class="info-square"></div>
+                                        <p class="info">
+                                            <span class="desc-highlight"
+                                                >Nom</span
+                                            >
+                                            - Mergui
+                                        </p>
+                                    </div>
+                                    <div class="info-item">
+                                        <div class="info-square"></div>
+                                        <p class="info">
+                                            <span class="desc-highlight"
+                                                >Prénom</span
+                                            >
+                                            - Tom
+                                        </p>
+                                    </div>
+                                    <div class="info-item">
+                                        <div class="info-square"></div>
+                                        <p class="info">
+                                            <span class="desc-highlight"
+                                                >Âge</span
+                                            >
+                                            - 20 ans
+                                        </p>
+                                    </div>
+                                    <div class="info-item">
+                                        <div class="info-square"></div>
+                                        <p class="info">
+                                            <span class="desc-highlight"
+                                                >Ville</span
+                                            >
+                                            - Amiens
+                                        </p>
+                                    </div>
+                                    <div class="info-item">
+                                        <div class="info-square"></div>
+                                        <p class="info" id="skills-redirect">
+                                            <span class="desc-highlight"
+                                                >Hobbies</span
+                                            >
+                                            - Photographie , Numérique , Digital , Tennis , Tir à l'arc , Jeux vidéos , Golf , Séjours à l'étranger 
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
 
-        SITE EN CONSTRUCTION <i class="fas fa-exclamation-triangle blinking-icon"></i>
+                    <section id="skills">
+                        <section-title
+                            :title="'Compétences'"
+                            :desc="'Domaines travaillés'"
+                            data-aos="fade-up"
+                            data-aos-duration="1000"
+                        ></section-title>
 
-      </marquee>
-    </div>
-     <section id="experience">
-      <h2>Expérience</h2>
-      <!-- Contenu de la section expérience -->
-      <!-- <ul>
-        <li> Intérimaire chez BPMED, Agence Antibes Saint Claude (06)
-          <p>Août 2021 +Août 2022   </p>
-        </li>
-        <p> ------------------------------------------------------------</p> -->
-    </section> 
-    <div class="loader">
-      
-      <span></span>
-      <span></span>
-      <span></span>
+                        <div class="skills-section">
+                            <div
+                                class="skills-grid"
+                                data-aos="fade-up"
+                                data-aos-duration="1000"
+                            >
+                                <div class="skills-item">
+                                    <si-title :title="'Front-End'"></si-title>
+                                    <div class="si-skills">
+                                        <img
+                                            src="./assets/site_tom_images/html-5.png"
+                                            alt="HTML5"
+                                            class="si-skills-icon"
+                                        />
+                                        <img
+                                            src="./assets/site_tom_images/css-3.png"
+                                            alt="CSS3"
+                                            class="si-skills-icon"
+                                        />
+                                        <img
+                                            src="./assets/site_tom_images/js.png"
+                                            alt="JavaScript"
+                                            class="si-skills-icon"
+                                        />
+                                        <img
+                                            src="./assets/site_tom_images/vue-9-logo-svgrepo-com.png"
+                                            alt="VueJS"
+                                            class="si-skills-icon"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="skills-item">
+                                    <si-title :title="'Back-End'"></si-title>
+                                    <div class="si-skills">
+                                        <img
+                                            src="./assets/site_tom_images/python.png"
+                                            alt="Python"
+                                            class="si-skills-icon"
+                                        />
+                                        <img
+                                            src="./assets/site_tom_images/php.png"
+                                            alt="PHP"
+                                            class="si-skills-icon"
+                                        />
+                                        <img
+                                            src="./assets/site_tom_images/mysql-logo-svgrepo-com.png"
+                                            alt="MySQL"
+                                            class="si-skills-icon"
+                                        />
+                                        <img
+                                            src="./assets/site_tom_images/wordpress.png"
+                                            alt="Wordpress"
+                                            class="si-skills-icon"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="skills-item">
+                                    <si-title :title="'Design'"></si-title>
+                                    <div class="si-skills">
+                                        <img
+                                            src="./assets/site_tom_images/figma.png"
+                                            alt="Figma"
+                                            class="si-skills-icon"
+                                        />
+                                        <img
+                                            src="./assets/site_tom_images/xd.png"
+                                            alt="AdobeXD"
+                                            class="si-skills-icon"
+                                        />
+                                        <img
+                                            src="./assets/site_tom_images/photoshop.png"
+                                            alt="Photoshop"
+                                            class="si-skills-icon"
+                                        />
+                                        <img
+                                            src="./assets/site_tom_images/illustrateur.png"
+                                            alt="Illustrator"
+                                            class="si-skills-icon"
+                                        />
+                                        <img
+                                            src="./assets/site_tom_images/indesign.png"
+                                            alt="InDesign"
+                                            class="si-skills-icon"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="skills-item">
+                                    <si-title :title="'Divers'"></si-title>
+                                    <div class="si-skills">
+                                        <img
+                                            src="./assets/site_tom_images/premiere-pro.png"
+                                            alt="Premiere Pro"
+                                            class="si-skills-icon"
+                                        />
+                                        <img
+                                            src="./assets/site_tom_images/trello.png"
+                                            alt="Trello"
+                                            class="si-skills-icon"
+                                        />
+                                        <img
+                                            src="./assets/site_tom_images/github.png"
+                                            alt="Github"
+                                            class="si-skills-icon"
+                                            id="career-path-redirect"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
 
-    </div>
-    <section id="skills">
-      <h2>Compétences</h2>
-      <!-- Contenu de la section compétences -->
-      
-      <div class="loader">
-      
-        <span></span>
-        <span></span>
-        <span></span>
-  
-      </div>
+                    <section id="career-path">
+                        <section-title
+                            :title="'Parcours'"
+                            :desc="'Retrouvez ci-dessous mon parcours'"
+                            data-aos="fade-up"
+                            data-aos-duration="1000"
+                        ></section-title>
+                        <div class="cp-grid cp-item-left">
+                            <!-- La Manu -->
+                            <div class="cp-item">
+                                <div
+                                    data-aos="fade-right"
+                                    data-aos-duration="1500"
+                                    class="cp-info"
+                                >
+                                    <h2 class="cp-item-title">
+                                        Bachelor Web Design & Developpement
+                                        (Première année)
+                                    </h2>
+                                    <h3 class="cp-item-place">
+                                        La Manu, Amiens (80)
+                                    </h3>
+                                    <hr class="cp-hr" />
+                                    <div class="cp-item-point">
+                                        <div class="section-title-square"></div>
+                                        <p>
+                                            Bases du développement web et cours
+                                            avancés (HTML, CSS, Javascript,
+                                            VueJS, Bootstrap)
+                                        </p>
+                                    </div>
+                                    <div class="cp-item-point">
+                                        <div class="section-title-square"></div>
+                                        <p>
+                                            Bases du développement back-end et
+                                            Gestion de bases de données (Python,
+                                            PHP & MySQL)
+                                        </p>
+                                    </div>
+                                    <div class="cp-item-point">
+                                        <div class="section-title-square"></div>
+                                        <p>
+                                            Découverte de Wordpress, utilisation
+                                            de plugins et de builders
+                                        </p>
+                                    </div>
+                                    <div class="cp-item-point">
+                                        <div class="section-title-square"></div>
+                                        <p>Design UI / UX (AdobeXD & Figma)</p>
+                                    </div>
+                                    <div class="cp-item-point">
+                                        <div class="section-title-square"></div>
+                                        <p>Introduction à Github</p>
+                                    </div>
+                                    <div class="cp-item-point">
+                                        <div class="section-title-square"></div>
+                                        <p>
+                                            Développement de la communication et
+                                            de l'expression orale
+                                        </p>
+                                    </div>
+                                    <div class="cp-item-point">
+                                        <div class="section-title-square"></div>
+                                        <p>Marketing digital</p>
+                                    </div>
+                                    <div class="cp-item-point">
+                                        <div class="section-title-square"></div>
+                                        <p>
+                                            Introduction à la Publication
+                                            Assistée par Ordinateur (Photoshop,
+                                            Illustrator, InDesign)
+                                        </p>
+                                    </div>
+                                    <div class="cp-item-point">
+                                        <div class="section-title-square"></div>
+                                        <p>
+                                            Approfondissement de l'expression
+                                            orale et des connaissances en langue
+                                            anglaise
+                                        </p>
+                                    </div>
+                                </div>
+                                <div
+                                    data-aos="fade-up"
+                                    data-aos-duration="1000"
+                                    class="cp-item-date-container"
+                                >
+                                    <div class="section-title-square"></div>
+                                    <p class="cp-item-date">
+                                        Octobre 2022 à <br />Juin 2023
+                                    </p>
+                                    <div class="section-title-square"></div>
+                                </div>
+                            </div>
+                            <!-- FAC Valrose -->
+                            <div class="cp-item">
+                                <div
+                                    data-aos="fade-right"
+                                    data-aos-duration="1500"
+                                    class="cp-info"
+                                >
+                                    <h2 class="cp-item-title">
+                                        Licence 1 ,  ( MIASH )
+                                    </h2>
+                                    <h3 class="cp-item-place">
+                                        Faculté des Sciences Valrose, UCA Nice (06)
+                                    </h3>
+                                    <hr class="cp-hr" />
+                                    <div class="cp-item-point">
+                                        <div class="section-title-square"></div>
+                                        <p>
+                                            Bases du développement web (HTML,
+                                            CSS, Bootstrap)
+                                        </p>
+                                    </div>
+                                    <div class="cp-item-point">
+                                        <div class="section-title-square"></div>
+                                        <p>
+                                            Bases du développement back-end et
+                                            Gestion de bases de données (C, C#,
+                                            C++, MySQL, Oracle)
+                                        </p>
+                                    </div>
+                                    <div class="cp-item-point">
+                                        <div class="section-title-square"></div>
+                                        <p>
+                                            Initiation aux systèmes
+                                            d'exploitation (Windows, Linux)
+                                        </p>
+                                    </div>
+                                    <div class="cp-item-point">
+                                        <div class="section-title-square"></div>
+                                        <p>Introduction à Github</p>
+                                    </div>
+                                    <div class="cp-item-point">
+                                        <div class="section-title-square"></div>
+                                        <p>
+                                            Développement de la communication et
+                                            de l'expression orale
+                                        </p>
+                                    </div>
+                                    <div class="cp-item-point">
+                                        <div class="section-title-square"></div>
+                                        <p>
+                                            Réalisation d'Interfaces
+                                            Homme-Machine
+                                        </p>
+                                    </div>
+                                    <div class="cp-item-point">
+                                        <div class="section-title-square"></div>
+                                        <p>
+                                            Introduction à l'architecture des
+                                            machines
+                                        </p>
+                                    </div>
+                                    <div class="cp-item-point">
+                                        <div class="section-title-square"></div>
+                                        <p id="portfolio-redirect">
+                                            Projet Professionnel Personnel
+                                        </p>
+                                    </div>
+                                </div>
+                                <div
+                                    data-aos="fade-up"
+                                    data-aos-duration="1000"
+                                    class="cp-item-date-container"
+                                >
+                                    <div class="section-title-square"></div>
+                                    <p class="cp-item-date">
+                                        Septembre 2021 à <br />Juin 2022
+                                    </p>
+                                    <div class="section-title-square"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
 
-    </section>
-    <section id="education">
-      <h2>Formation</h2>
-      <!-- Contenu de la section formation -->
-      <div class="loader">
-      
-        <span></span>
-        <span></span>
-        <span></span>
-  
-      </div>
-    </section>
-    <section id="languages">
-      <h2>Langues</h2>
-      <!-- Contenu de la section langues -->
-      
-      <!-- <ul>
-        <li> <i class="flag-icon flag-icon-fr" title="Français"></i>
-           : Langue Maternelle </li>
-        <li> <i class="flag-icon flag-icon-us" title="Anglais"></i>  : Niveau B2  Cambridge Assessment <a href="https://www.cam.ac.uk" target="_blank"> <img src="assets/site_tom_images/university-of-cambridge.png" title="Cambridge" width="20px"></a> , ≠ voyages à l'étranger  (<i class="flag-icon flag-icon-ie" title="Irlande"></i> , <i class="flag-icon flag-icon-gb" title="Royaume-Uni"></i>, <i class="flag-icon flag-icon-gr" title="Grèce"></i> & <i class="flag-icon flag-icon-nl" title="Pays-Bas"></i>) </li>
-       <li> <i class="flag-icon flag-icon-es" title="Espagnol"></i>
-         : Niveau Scolaire</li>
-      </ul> -->
-      <div class="loader">
-      
-        <span></span>
-        <span></span>
-        <span></span>
-  
-      </div>
-    </section>
-    <section id="interests">
-      <h2>Centres d'intérêt</h2>
-      <!-- <ul>
-        <li> <img src="/assets/site_tom_images/photographie.png" title="Photographie" width="200px"></li>
-        <li><img src="/assets/site_tom_images/tennis.png" title="Tennis" width="200px"></li>
-        <li><img src="/assets/site_tom_images/avion.png" title="Séjours à l'étranger" width="200px"></li>
-        <li><img src="/assets/site_tom_images/conception-reactive.png" title=" Numérique & Digital " width="200px"> </li>
-        <li><img src="/assets/site_tom_images/tir-a-larc.png" title="Tir à l'arc" width="200px"></li>
-        <li><img src="/assets/site_tom_images/golf.png" title=" Golf " width="200px"></li>
-      </ul> -->
-      <div class="loader">
-      
-        <span></span>
-        <span></span>
-        <span></span>
-  
-      </div>
-    </section>
-    <footer> 
-      <a > <img src="assets/site_tom_images/fleche_gauche.png" width="40px"> </a>
-      <a href="assets/site_tom_docs/Lettre de Motivation Généraliste Tom Mergui.pdf"  title="LM GENERALISTE STAGE " download><img src="assets/site_tom_images/lettre-de-motivation.png" width="40px"> </a>
-      <a href="assets/site_tom_docs/CV TOM MERGUI.pdf" title="CV TOM MERGUI"  download> <img src="assets/site_tom_images/CV.png" width="40px"> </a>
-      <!-- <a href="index.html"  title="HOME"> <img src="/images/page-daccueil.png" width="40px" ></a> -->
-    
+                    <section id="portfolio">
+                        <section-title
+                            :title="'Portfolio'"
+                            :desc="'Retrouvez ci-dessous mes créations'"
+                            data-aos="fade-up"
+                            data-aos-duration="1000"
+                        ></section-title>
 
-      <!-- <a href="/Tom MERGUI Lettre MOTIVATION OT.pdf" alt="LM Office Du Tourisme" title="LM OFFICE DU TOURISME AMIENS" download> <img src="lettre-de-motivation.png" width="40px"> </a> -->
-      <a><img src="assets/site_tom_images/fleche_droite.png" width="40px"> </a>
-      <!-- <a href="https://portfoliotommergui80.my.canva.site/" target="_blank"> Mon PortFolio </a> -->
-       <!-- <br><a href="https://github.com/Paradise2880" target="_blank"><i class="fa-brands fa-square-github fa-lg"></i> GITHUB </a>
-       <a href="//www.linkedin.com/in/tom-m-587221205/" target="_blank" class="linkedin-btn">
-        <img src="images/linkedin.png" width="20px" title="Linkedin">
-      </a> -->
-      
-    </footer>
-    <div class="copyright">
-      <p>Copyright ©  2023 Tom Mergui   <br> All rights reserved.</p>
-    
-    </div>
-        <script src="assets/site_tom_js/script.js"></script>
+                        <div
+                            class="portfolio-grid"
+                            data-aos="fade-up"
+                            data-aos-duration="1000"
+                        >
+                            <portfolio-item
+                                class="les-vieilles-charettes"
+                                :pi_title="'Les Vieilles Charettes'"
+                                :pi_desc="`Les Vieilles Charrettes est un projet Wordpress personnel de début d'année, que nous avons réalisé en 2 mois, avec d'abord la conception du wireframe, le maquettage, et enfin la création du site internet avec Wordpress.`"
+                            ></portfolio-item>
+                            <portfolio-item
+                                class="maison-levasseur"
+                                :pi_title="'Maison Levasseur'"
+                                :pi_desc="`Maison Levasseur est un projet de groupe de début d'année qui a duré un peu plus d'un mois. Nous devions proposer une maquette d'un site à une vraie cliente qui tenait sa boulangerie avec son conjoint.`"
+                            ></portfolio-item>
+                            <portfolio-item
+                                class="instant-gaming"
+                                :pi_title="'Instant Gaming'"
+                                :pi_desc="`Le projet Instant Gaming a duré 3 jours. Il consistait à réaliser la maquette version mobile du site Instant Gaming, en groupe, afin de pouvoir coder notre propre version du site par la suite, de manière responsive.`"
+                            ></portfolio-item>
+                            <portfolio-item
+                                class="musee"
+                                :pi_title="'Musée du Petit Palais'"
+                                :pi_desc="`Le Musée du Petit Palais est un sujet que nous avons eu à la première période des partiels. Nous devions réaliser en 3 heures une nouvelle maquette pour le site du Musée du Petit Palais d'Avignon, afin de lui donner une nouvelle identité et attirer un plus large public.`"
+                            ></portfolio-item>
+                            <portfolio-item
+                                class="popchill"
+                                :pi_title="'Popchill'"
+                                :pi_desc="`Popchill est le nom que nous avons donné à notre site lors d'un projet de groupe, qui a duré 3 jours, qui consistait à reproduire un site de streaming à l'aide d'une API. Nous avons donc conçu la maquette dans un premier temps, puis par la suite nous avons codé le site en HTML & CSS, et nous avons implémenté l'API grâce à VueJS.`"
+                            ></portfolio-item>
+                            <portfolio-item
+                                class="trouvailles"
+                                :pi_title="'Les Trouvailles de Thaïs'"
+                                :pi_desc="`Les Trouvailles de Thaïs est le nom du site que nous avons réalisé pour une vraie cliente qui tient sa boutique à Amiens. C'est un projet de groupe qui a duré 3 mois, avec adaptation de la charte graphique pour le web, la conception du wireframe, de la maquette, et enfin du site Wordpress, avec la gestion des plugins nécessaires aux besoins de la cliente.`"
+                            ></portfolio-item>
+                            <portfolio-item
+                                class="fluxml"
+                                :pi_title="'FluXML'"
+                                :pi_desc="`FluXML est le nom que nous avons donné à notre projet de découverte du XML. Nous avions pour objectif de réaliser un site d'informations, regroupant plusieurs catégories, dynamique à l'aide de PHP, JS et XML. Ce projet de groupe à duré une semaine.`"
+                            ></portfolio-item>
+                        </div>
+                    </section>
 
+                    <section id="contact">
+                        <div class="contact-container">
+                            <img
+                                src="./assets/site_tom_images/phone.png"
+                                alt="Téléphone"
+                                class="contact-icon"
+                            />
+                            <p>06 51 98 09 17</p>
+                        </div>
+                        <div class="contact-container">
+                            <img
+                                src="./assets/site_tom_images/mail.png"
+                                alt="Téléphone"
+                                class="contact-icon"
+                            />
+                            <p class="break">tom.mergui@gmail.com</p>
+                        </div>
+                    </section>
+                </section>
+            </main>
 
-  </body>
+            <footer id="social">
+                <section class="container container-footer">
+                    <section class="contact">
+                        <div class="social-medias">
+                            <hr class="footer-hr" />
+                            <a
+                                href="https://github.com/Paradise2880"
+                                target="_blank"
+                                class="footer-icon-container"
+                            >
+                                <img
+                                    src="./assets/site_tom_images/github (1).png"
+                                    alt="Github"
+                                    class="footer-icon"
+                                />
+                            </a>
+                            <a
+                                href="https://www.linkedin.com/in/tom-m-587221205/"
+                                target="_blank"
+                                class="footer-icon-container"
+                            >
+                                <img
+                                    src="./assets/site_tom_images/linkedin (1).png"
+                                    alt="LinkedIn"
+                                    class="footer-icon"
+                                />
+                            </a>
+                            <a
+                                href="https://linktr.ee/TomParadise"
+                                target="_blank"
+                                class="footer-icon-container"
+                            >
+                                <img
+                                    src="./assets/site_tom_images/linktree_logo_icon_247832.png"
+                                    alt="Linktree"
+                                    class="footer-icon"
+                                />
+                            </a>
+                            <hr class="footer-hr" />
+                        </div>
+                        <div class="mentions">
+                            <p class="mentions-item">Tom MERGUI © 2023</p>
+                            <p class="mentions-item">Tous droits réservés</p>
+                        </div>
+                    </section>
+                </section>
+            </footer>
+        </section>
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+    <script src="./assets/site_tom_js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </html>
-
-
