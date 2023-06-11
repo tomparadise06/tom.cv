@@ -120,7 +120,7 @@ nav a.disabled {
 #home {
     height: 100vh;
     padding-top: 4vh;
-    background: linear-gradient(180deg, rgba(5,10,39,0.3) 60%, rgba(5,10,39,1) 100%), url("../site_tom_images/banniere.jpg");
+    background: linear-gradient(180deg, rgba(5,10,39,0.3) 60%, rgba(5,10,39,1) 100%), url("../site_tom_images/ia_banniere.jpg");
     background-size: cover;
     display: flex;
     flex-direction: column;
