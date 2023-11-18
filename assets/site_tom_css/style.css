@@ -542,3 +542,37 @@ footer {
     font-weight: 300;
     margin-block: 1vh;
 }
+/* Hamburger Menu CSS */
+.hamburger {
+  display: none; /* Initially hidden */
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.hamburger .bar {
+  height: 0.25rem;
+  width: 100%;
+  background-color: #333;
+  border-radius: 10px;
+}
+
+/* Styles to hide the main menu and show the hamburger icon */
+@media screen and (max-width: 480px) {
+  .hamburger {
+    display: flex; /* Show the hamburger menu on mobile devices */
+  }
+
+  .main-menu {
+    display: none; /* Hide the full menu on mobile devices */
+  }
+
+  .menu-active .main-menu {
+    display: block; /* Show the menu when the hamburger is active */
+  }
+}
