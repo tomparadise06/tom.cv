@@ -85,13 +85,3 @@ win.onscroll = function(){
     var sTop = (this.pageYOffset || docEl.scrollTop)  - (docEl.clientTop || 0);
     $nav.style.backgroundColor =  sTop > 500 ? "rgba(0, 0, 0, 1)":"rgba(0, 0, 0, 0)" ;
  };
-// Hamburger Menu JavaScript Functionality
-document.addEventListener('DOMContentLoaded', function() {
-  var hamburger = document.getElementById('hamburger');
-  var navMenu = document.querySelector('.main-menu');
-
-  hamburger.addEventListener('click', function() {
-    this.classList.toggle('is-active');
-    navMenu.classList.toggle('menu-active');
-  });
-});
