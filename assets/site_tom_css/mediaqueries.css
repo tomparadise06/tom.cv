@@ -170,3 +170,29 @@
     }
 
 }
+
+
+
+/* Tablettes */
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+    body {
+        font-size: 16px; /* Ajustement pour une meilleure lisibilité */
+    }
+    /* Ajouter ici d'autres règles spécifiques aux tablettes */
+}
+
+/* Grands écrans */
+@media screen and (min-width: 1025px) {
+    body {
+        font-size: 18px; /* Ajustement pour une meilleure lisibilité */
+    }
+    /* Ajouter ici d'autres règles spécifiques aux grands écrans */
+}
+
+/* Petits écrans (déjà existant) */
+@media screen and (max-width: 640px) {
+    body {
+        font-size: 14px; /* Ajustement pour une meilleure lisibilité */
+    }
+    /* Maintenir les règles existantes et ajuster si nécessaire */
+}
