@@ -27,6 +27,7 @@ nav ul {
     margin: 0;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 nav ul li {
@@ -84,19 +85,29 @@ footer {
     margin-top: 20px;
 }
 
+footer .social-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
 footer .social-links a {
-    color: #333333;
+    background-color: #333333;
+    color: white;
     margin: 0 10px;
     text-decoration: none;
-    transition: color 0.3s;
+    border-radius: 50%;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
 }
 
 footer .social-links a:hover {
-    color: #e63946;
-}
-
-.social-links {
-    margin-top: 10px;
+    background-color: #e63946;
 }
 
 form {
@@ -139,4 +150,69 @@ form button:hover {
 
 .project img:hover {
     transform: scale(1.05);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 0;
+    }
+    
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    section {
+        padding: 60px 20px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+
+    footer .social-links a {
+        margin: 0 5px;
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 40px 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.75em;
+    }
+
+    h3 {
+        font-size: 1.25em;
+    }
+
+    footer .social-links a {
+        margin: 0 3px;
+        width: 30px;
+        height: 30px;
+    }
 }
