@@ -3,106 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Tom Mergui</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Tom's Personal Website</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#apropos">À Propos</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#cv">CV</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section id="accueil">
-        <h1>Tom Mergui</h1>
-        <p>Étudiant en Web Design UX/UI</p>
-        <img src="/assets/site_tom_images/photo de profil.jpg" alt="Photo de Tom Mergui">
-        <p>Bienvenue sur mon portfolio ! Découvrez mes projets, mon parcours et comment me contacter.</p>
-    </section>
+<header>
+    <h1>Tom's Portfolio</h1>
+</header>
 
-    <section id="apropos">
-        <h2>À Propos</h2>
-        <p>Je suis étudiant en Web Design UX/UI avec une passion pour la création de sites web innovants. J'aime combiner esthétique et fonctionnalité pour offrir une expérience utilisateur optimale. Je suis également passionné par le cinéma, les voyages, la photographie et l'intelligence artificielle.</p>
-        <h3>Compétences</h3>
-        <ul>
-            <li>Sens du relationnel et des responsabilités</li>
-            <li>Compétences en création de contenus pour les médias sociaux</li>
-            <li>Esprit d'équipe et travail autonome</li>
-            <li>Capacité à suivre des instructions et à obtenir des résultats de qualité</li>
-            <li>Capacité à s'adapter rapidement aux changements</li>
-            <li>HTML / CSS / WordPress / PrestaShop / Github</li>
-            <li>Google Ads / Social Ads / Meta Business Suite / Metricool</li>
-            <li>Canva / Figma / Adobe Illustrator / Adobe InDesign</li>
-            <li>Adobe Photoshop / Microsoft Office / Adobe XD / Expert en IA</li>
-        </ul>
-    </section>
+<nav>
+    <a href="#about">About</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+</nav>
 
-    <section id="portfolio">
-        <h2>Portfolio</h2>
-        <div class="project">
-            <h3>Projet 1: Site Web pour une Agence de Voyage</h3>
-            <img src="img/projet1.jpg" alt="Image du projet 1">
-            <p>J'ai conçu et développé un site web pour une agence de voyage, mettant l'accent sur une expérience utilisateur intuitive et une présentation visuelle attrayante. Le site est entièrement responsive et comprend des fonctionnalités interactives.</p>
-        </div>
-        <div class="project">
-            <h3>Projet 2: Application Mobile de Suivi de Films</h3>
-            <img src="img/projet2.jpg" alt="Image du projet 2">
-            <p>Développement d'une application mobile pour suivre les films vus et à voir, avec une interface utilisateur claire et des fonctionnalités de recommandation basées sur les préférences de l'utilisateur.</p>
-        </div>
-        <div class="project">
-            <h3>Projet 3: Portfolio Photographique</h3>
-            <img src="img/projet3.jpg" alt="Image du projet 3">
-            <p>Création d'un portfolio en ligne pour présenter mes photographies, avec une mise en page minimaliste et élégante qui met en valeur les images. Le site inclut des galeries interactives et une navigation fluide.</p>
-        </div>
-    </section>
+<section id="about">
+    <h2 class="section-title">About Me</h2>
+    <p>Hi, I'm Tom, a passionate web design UX/UI student from Amiens. I love cinema, travel, photography, and everything digital.</p>
+</section>
 
-    <section id="cv">
-        <h2>CV</h2>
-        <a href="./CV ALTERNANCE DESIGN UX UI & MARKETING TOM MERGUI.pdf" download>Télécharger mon CV</a>
-        <h3>Expérience</h3>
-        <ul>
-            <li><strong>La Retoucherie, Amiens (80)</strong> - Stagiaire B2 Polyvalent - Web Design & Marketing dans le Textile (Avril à Juillet 2024)</li>
-            <li><strong>Agir RH Conseil, Antibes (06)</strong> - Stagiaire B1 Développeur Web et supports médias (Mai à Juin 2023)</li>
-            <li><strong>Banque Populaire Méditerranée, Antibes (06)</strong> - Chargé d’accueil clientèle (Août 2021/2022/2023)</li>
-            <li><strong>Loic Bisoli Photographe, Antibes (06)</strong> - Stagiaire en photographie pour shooting et reportages en extérieurs (Février 2018)</li>
-            <li><strong>Fashion Goodiz, Saint Paul (06)</strong> - Stagiaire en marketing, goodies d'entreprise (Mai 2017)</li>
-        </ul>
-        <h3>Formation</h3>
-        <ul>
-            <li><strong>Bachelor Web & Application Developer</strong> - LA MANU - École supérieure des métiers du numérique (Septembre 2022 à Aujourd'hui)</li>
-            <li><strong>Licence 1, MIASH (Mathématiques, Informatique, Sciences Humaines)</strong> - Faculté des Sciences Valrose, Université Nice Côte d'Azur (2021-2022)</li>
-            <li><strong>Baccalauréat Général Scientifique (option Mathématiques / SVT)</strong> - Lycée Simone Veil, Valbonne Sophia Antipolis (2020-2021)</li>
-            <li><strong>Préparation Militaire Marine Nationale</strong> - PMM, Cannes (2019-2020)</li>
-        </ul>
-    </section>
+<section id="portfolio" class="portfolio">
+    <h2 class="section-title">Portfolio</h2>
+    <img src="your-image1.jpg" alt="Project 1">
+    <img src="your-image2.jpg" alt="Project 2">
+    <img src="your-image3.jpg" alt="Project 3">
+</section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <form action="mailto:tom.mergui@gmail.com" method="post" enctype="text/plain">
-            <label for="name">Nom:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Envoyer</button>
-        </form>
-    </section>
+<section id="skills">
+    <h2 class="section-title">Skills</h2>
+    <ul>
+        <li>Web Design</li>
+        <li>UX/UI Design</li>
+        <li>Photography</li>
+        <li>Digital Art</li>
+    </ul>
+</section>
 
-    <footer>
-        <p>&copy; 2024 Tom Mergui. Tous droits réservés.</p>
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/tom-m-587221205/" target="_blank"><img src="assets/site_tom_images/linkedin (1).png" alt="LinkedIn"></a>
-            <a href="https://github.com/tomparadise06" target="_blank"><img src="assets/site_tom_images/github-blue.png" alt="Github"></a>
-        </div>
-    </footer>
+<section id="contact">
+    <h2 class="section-title">Contact</h2>
+    <form class="contact-form" id="contactForm">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
 
-    <script src="script.js"></script>
+<script src="script.js"></script>
+
 </body>
 </html>
