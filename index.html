@@ -1,57 +1,113 @@
-<!DOCTYPE html>
-<html lang="fr">
+<!DOCTYPE HTML>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tom's Personal Website</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>Tom's Portfolio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="homepage is-preload">
+    <div id="page-wrapper">
 
-<header>
-    <h1>Tom's Portfolio</h1>
-</header>
+        <!-- Header -->
+        <div id="header-wrapper">
+            <div class="container">
 
-<nav>
-    <a href="#about">About</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
-</nav>
+                <!-- Header -->
+                <header id="header">
+                    <div class="inner">
 
-<section id="about">
-    <h2 class="section-title">About Me</h2>
-    <p>Hi, I'm Tom, a passionate web design UX/UI student from Amiens. I love cinema, travel, photography, and everything digital.</p>
-</section>
+                        <!-- Logo -->
+                        <h1><a href="index.html" id="logo">Tom's Portfolio</a></h1>
 
-<section id="portfolio" class="portfolio">
-    <h2 class="section-title">Portfolio</h2>
-    <img src="your-image1.jpg" alt="Project 1">
-    <img src="your-image2.jpg" alt="Project 2">
-    <img src="your-image3.jpg" alt="Project 3">
-</section>
+                        <!-- Nav -->
+                        <nav id="nav">
+                            <ul>
+                                <li class="current_page_item"><a href="#about">About</a></li>
+                                <li><a href="#portfolio">Portfolio</a></li>
+                                <li><a href="#skills">Skills</a></li>
+                                <li><a href="#contact">Contact</a></li>
+                            </ul>
+                        </nav>
 
-<section id="skills">
-    <h2 class="section-title">Skills</h2>
-    <ul>
-        <li>Web Design</li>
-        <li>UX/UI Design</li>
-        <li>Photography</li>
-        <li>Digital Art</li>
-    </ul>
-</section>
+                    </div>
+                </header>
 
-<section id="contact">
-    <h2 class="section-title">Contact</h2>
-    <form class="contact-form" id="contactForm">
-        <input type="text" id="name" placeholder="Your Name" required>
-        <input type="email" id="email" placeholder="Your Email" required>
-        <textarea id="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-    </form>
-</section>
+            </div>
+        </div>
 
-<script src="./script.js"></script>
+        <!-- About Section -->
+        <section id="about" class="container">
+            <header>
+                <h2>About Me</h2>
+            </header>
+            <p>Hi, I'm Tom, a passionate web design UX/UI student from Amiens. I love cinema, travel, photography, and everything digital.</p>
+        </section>
 
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="container">
+            <header>
+                <h2>Portfolio</h2>
+            </header>
+            <div class="row">
+                <div class="4u 12u(mobile)">
+                    <section class="box">
+                        <a href="#" class="image featured"><img src="images/your-image1.jpg" alt="Project 1" /></a>
+                        <header>
+                            <h3>Project 1</h3>
+                        </header>
+                        <p>Description of project 1.</p>
+                    </section>
+                </div>
+                <div class="4u 12u(mobile)">
+                    <section class="box">
+                        <a href="#" class="image featured"><img src="images/your-image2.jpg" alt="Project 2" /></a>
+                        <header>
+                            <h3>Project 2</h3>
+                        </header>
+                        <p>Description of project 2.</p>
+                    </section>
+                </div>
+                <div class="4u 12u(mobile)">
+                    <section class="box">
+                        <a href="#" class="image featured"><img src="images/your-image3.jpg" alt="Project 3" /></a>
+                        <header>
+                            <h3>Project 3</h3>
+                        </header>
+                        <p>Description of project 3.</p>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="container">
+            <header>
+                <h2>Skills</h2>
+            </header>
+            <ul>
+                <li>Web Design</li>
+                <li>UX/UI Design</li>
+                <li>Photography</li>
+                <li>Digital Art</li>
+            </ul>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="container">
+            <header>
+                <h2>Contact</h2>
+            </header>
+            <form class="contact-form" id="contactForm">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea id="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,3 +1,5 @@
+// Ajout du script pour gérer le formulaire de contact
+
 document.getElementById('contactForm').addEventListener('submit', function(event) {
     event.preventDefault();
     const name = document.getElementById('name').value;
