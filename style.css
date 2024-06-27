@@ -72,13 +72,44 @@ body {
     display: none;
 }
 
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.burger.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.burger.toggle .line2 {
+    opacity: 0;
+}
+
+.burger.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.nav-active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
 /* Hero Section */
 .hero {
     height: 100vh;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: white;
+    text-align: center;
+    padding: 2rem;
 }
 
 .hero h1 {
@@ -86,10 +117,9 @@ body {
     margin-bottom: 1rem;
 }
 
-.hero h2 {
+.hero p {
     font-size: 1.5rem;
     margin-bottom: 2rem;
-    font-weight: 300;
 }
 
 .cta-button {
@@ -248,14 +278,6 @@ footer .container {
     .burger {
         display: block;
         cursor: pointer;
-    }
-
-    .burger span {
-        display: block;
-        width: 25px;
-        height: 3px;
-        background-color: var(--text-color);
-        margin: 5px 0;
     }
 
     .about-content {

@@ -17,12 +17,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Form submission (you'll need to implement the actual submission logic)
+    // Form submission
     const form = document.getElementById('contact-form');
     form.addEventListener('submit', (e) => {
         e.preventDefault();
+        // Form validation
+        const name = form.elements['nom'].value.trim();
+        const email = form.elements['email'].value.trim();
+        const message = form.elements['message'].value.trim();
+
+        if (!name || !email || !message) {
+            alert('Veuillez remplir tous les champs.');
+            return;
+        }
+
         // Add your form submission logic here
         console.log('Form submitted');
+        // Simulate form submission for demonstration
+        alert('Merci, votre message a été envoyé !');
     });
 
     // Scroll animations
@@ -32,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const elementTop = el.getBoundingClientRect().top;
         return (
             elementTop <= 
-            ((window.innerHeight || document.documentElement.clientHeight) * (percentageScroll/100))
+            ((window.innerHeight || document.documentElement.clientHeight) * (percentageScroll / 100))
         );
     };
 
@@ -51,8 +63,8 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 hideScrollElement(el);
             }
-        })
-    }
+        });
+    };
 
     window.addEventListener('scroll', () => {
         handleScrollAnimation();
