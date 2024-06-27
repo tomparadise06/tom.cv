@@ -220,34 +220,61 @@ h2 {
     transform: translateY(0);
 }
 
-/* Contact Form */
-#contact-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 500px;
-    margin: 0 auto;
+/* CV Section */
+#cv {
+    background-color: var(--bg-color);
+    text-align: center;
 }
 
-#contact-form input,
-#contact-form textarea {
+#cv p {
+    margin-bottom: 2rem;
+}
+
+/* Contact Section */
+#contact {
+    text-align: center;
+    padding: 5rem 0;
+}
+
+#contact p {
     margin-bottom: 1rem;
-    padding: 0.8rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
 }
 
-#contact-form button {
-    background-color: var(--primary-color);
+.qr-codes {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.qr-code {
+    text-align: center;
+}
+
+.qr-code img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 0.5rem;
+}
+
+.social-share {
+    margin-top: 2rem;
+}
+
+.social-share a {
+    display: inline-block;
+    margin: 0 1rem;
+    text-decoration: none;
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-share a:hover {
+    background-color: var(--text-color);
     color: white;
-    border: none;
-    padding: 0.8rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-#contact-form button:hover {
-    background-color: var(--secondary-color);
 }
 
 /* Footer */
@@ -296,5 +323,10 @@ footer .container {
 
     .social-links {
         margin-top: 1rem;
+    }
+
+    .qr-codes {
+        flex-direction: column;
+        align-items: center;
     }
 }
