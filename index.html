@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio de Tom Mergui - Web Designer UX/UI</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
     <meta name="description" content="Portfolio de Tom Mergui, étudiant en web design UX/UI.">
     <meta name="keywords" content="web design, UX, UI, portfolio, Tom Mergui">
@@ -34,14 +34,16 @@
 
     <main>
         <section id="accueil" class="hero">
-            <h1>Bienvenue sur mon site</h1>
-            <p>Je suis un étudiant passionné de web design UX/UI et pas que ça haha</p>
-            <a href="#portfolio" class="cta-button">Voir mon travail</a>
+            <div class="hero-content">
+                <h1>Bienvenue sur mon portfolio</h1>
+                <p>Je suis un étudiant passionné de web design UX/UI</p>
+                <a href="#portfolio" class="cta-button">Voir mon travail</a>
+            </div>
         </section>
 
         <section id="a-propos">
             <div class="container about-content">
-                <img src="https://example.com/profile.jpg" alt="Photo de profil" class="profile-pic" loading="lazy">
+                <img src="https://example.com/profile.jpg" alt="Photo de profil" class="profile-pic">
                 <div class="about-text">
                     <h2>À Propos de Moi</h2>
                     <p>Étudiant de 21 ans en Bachelor web design UX UI, actuellement en stage à Amiens. Passionné par le cinéma, les voyages, la photographie et l'intelligence artificielle.</p>
@@ -81,99 +83,37 @@
             </div>
         </section>
 
-        <section id="experiences">
-            <div class="container">
-                <h2>Expériences Professionnelles</h2>
-                <ul class="experience-list">
-                    <li>
-                        <h3>LA RETOUCHERIE, Amiens (80)</h3>
-                        <p>Stagiaire B2 Polyvalent - Web Design & Marketing dans le Textile</p>
-                        <p>Avril à Juillet 2024</p>
-                    </li>
-                    <li>
-                        <h3>AGIR RH CONSEIL, Antibes (06)</h3>
-                        <p>Stagiaire B1 Développeur Web et supports médias</p>
-                        <p>Mai à Juin 2023</p>
-                    </li>
-                    <li>
-                        <h3>BANQUE POPULAIRE MEDITERRANEE, Antibes (06)</h3>
-                        <p>Chargé d’accueil clientèle</p>
-                        <p>Août 2021/2022/2023</p>
-                    </li>
-                    <li>
-                        <h3>LOIC BISOLI PHOTOGRAPHE, Antibes (06)</h3>
-                        <p>Stagiaire en photographie pour shooting et reportages en extérieurs</p>
-                        <p>Février 2018</p>
-                    </li>
-                    <li>
-                        <h3>FASHION GOODIZ, Saint Paul (06)</h3>
-                        <p>Stagiaire en marketing, Goodies d'entreprise</p>
-                        <p>Mai 2017</p>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="formations">
-            <div class="container">
-                <h2>Formations Professionnelles</h2>
-                <ul class="education-list">
-                    <li>
-                        <h3>Bachelor Web & Application Developer</h3>
-                        <p>LA MANU - Ecole supérieure des métiers du numérique</p>
-                        <p>Septembre 2022 à Aujourd'hui</p>
-                    </li>
-                    <li>
-                        <h3>Licence 1, MIASH (Mathématiques, Informatique, Sciences Humaines)</h3>
-                        <p>Université Nice Côte d'Azur</p>
-                        <p>2021-2022</p>
-                    </li>
-                    <li>
-                        <h3>Baccalauréat Général Scientifique (option Mathématiques / SVT)</h3>
-                        <p>Lycée Simone Veil, Valbonne Sophia Antipolis</p>
-                        <p>2020-2021</p>
-                    </li>
-                    <li>
-                        <h3>Préparation Militaire Marine Nationale</h3>
-                        <p>PMM, Cannes</p>
-                        <p>2019-2020</p>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
         <section id="portfolio">
             <div class="container portfolio-grid">
                 <h2>Mon Portfolio</h2>
                 <div class="portfolio-item scroll-animation">
-                    <img src="https://example.com/projet1.jpg" alt="Projet 1" loading="lazy">
+                    <img src="https://example.com/projet1.jpg" alt="Projet 1">
                     <div class="portfolio-overlay">
                         <h3>Projet 1</h3>
                         <p>Description du projet 1. Un projet de design UX pour une application mobile de gestion de tâches.</p>
                     </div>
                 </div>
                 <div class="portfolio-item scroll-animation">
-                    <img src="https://example.com/projet2.jpg" alt="Projet 2" loading="lazy">
+                    <img src="https://example.com/projet2.jpg" alt="Projet 2">
                     <div class="portfolio-overlay">
                         <h3>Projet 2</h3>
                         <p>Description du projet 2. Un site web interactif pour une boutique en ligne de vêtements.</p>
                     </div>
                 </div>
                 <div class="portfolio-item scroll-animation">
-                    <img src="https://example.com/projet3.jpg" alt="Projet 3" loading="lazy">
+                    <img src="https://example.com/projet3.jpg" alt="Projet 3">
                     <div class="portfolio-overlay">
                         <h3>Projet 3</h3>
                         <p>Description du projet 3. Un design de site web pour un restaurant local.</p>
                     </div>
                 </div>
                 <div class="portfolio-item scroll-animation">
-                    <img src="https://example.com/projet4.jpg" alt="Projet 4" loading="lazy">
+                    <img src="https://example.com/projet4.jpg" alt="Projet 4">
                     <div class="portfolio-overlay">
                         <h3>Projet 4</h3>
                         <p>Description du projet 4. Une application web de gestion de projets avec une interface utilisateur intuitive.</p>
                     </div>
                 </div>
-                <!-- Ajoutez d'autres projets ici -->
             </div>
         </section>
 
@@ -226,6 +166,6 @@
         </div>
     </footer>
 
-    <script src="./script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

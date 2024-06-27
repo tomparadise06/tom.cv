@@ -1,9 +1,9 @@
 :root {
-    --primary-color: #6c5ce7;
-    --secondary-color: #a29bfe;
-    --text-color: #2d3436;
-    --bg-color: #ffffff;
-    --accent-color: #fd79a8;
+    --primary-color: #0A0A23; /* Bleu marine */
+    --secondary-color: #F5A623; /* Orange */
+    --text-color: #333333; /* Gris foncé */
+    --background-color: #FFFFFF; /* Blanc */
+    --accent-color: #FF5A5F; /* Rouge/orange vif */
 }
 
 * {
@@ -16,7 +16,7 @@ body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
-    background-color: var(--bg-color);
+    background-color: var(--background-color);
 }
 
 .container {
@@ -110,6 +110,10 @@ body {
     color: white;
     text-align: center;
     padding: 2rem;
+}
+
+.hero-content {
+    z-index: 1;
 }
 
 .hero h1 {
@@ -222,7 +226,7 @@ h2 {
 
 /* CV Section */
 #cv {
-    background-color: var(--bg-color);
+    background-color: var(--background-color);
     text-align: center;
 }
 
