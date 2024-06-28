@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav-links');
-    const themeToggle = document.querySelector('#theme-toggle');
     const scrollToTopBtn = document.querySelector('#scroll-to-top');
 
     // Menu burger
@@ -36,10 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Theme toggle
-    themeToggle.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
-    });
 
     // Bouton pour remonter
     window.addEventListener('scroll', () => {
