@@ -242,6 +242,12 @@ h2 {
     margin-bottom: 2rem;
 }
 
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
 /* Contact Section */
 #contact {
     text-align: center;
@@ -302,9 +308,13 @@ footer .container {
     align-items: center;
 }
 
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
 .social-links a {
     color: white;
-    margin-left: 1rem;
     text-decoration: none;
 }
 
@@ -335,6 +345,7 @@ footer .container {
 
     .social-links {
         margin-top: 1rem;
+        justify-content: center; /* Ajouté pour centrer les icônes sur mobile */
     }
 
     .qr-codes {
