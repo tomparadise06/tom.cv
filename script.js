@@ -1,8 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav-links');
+    const themeToggle = document.querySelector('#theme-toggle');
+    const scrollToTopBtn = document.querySelector('#scroll-to-top');
 
-    // Vérifiez si les éléments existent avant d'ajouter les écouteurs d'événements
+    // Menu burger
     if (burger && nav) {
         burger.addEventListener('click', () => {
             nav.classList.toggle('nav-active');
@@ -17,6 +19,12 @@ document.addEventListener('DOMContentLoaded', () => {
             document.querySelector(this.getAttribute('href')).scrollIntoView({
                 behavior: 'smooth'
             });
+
+            // Ferme le menu après un clic sur un lien de navigation
+            if (window.innerWidth <= 768) {
+                nav.classList.remove('nav-active');
+                burger.classList.remove('toggle');
+            }
         });
     });
 
@@ -27,6 +35,24 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('Merci de télécharger mon CV!');
         });
     }
+
+    // Theme toggle
+    themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+    });
+
+    // Bouton pour remonter
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            scrollToTopBtn.classList.add('show');
+        } else {
+            scrollToTopBtn.classList.remove('show');
+        }
+    });
+
+    scrollToTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
 
     // Scroll animations
     const scrollElements = document.querySelectorAll('.scroll-animation');

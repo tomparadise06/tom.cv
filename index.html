@@ -22,10 +22,18 @@
                     <li><a href="#competences">Compétences</a></li>
                     <li><a href="#formations">Formations</a></li>
                     <li><a href="#experiences">Expériences</a></li>
+                    <li><a href="#interets">Centres d'Intérêt</a></li>
+                    <li><a href="#langues">Langues</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
             </div>
         </nav>
+        <button id="theme-toggle">Thème Sombre/Clair</button>
     </header>
 
     <main>
@@ -125,21 +133,56 @@
             </div>
         </section>
 
+        <section id="interets">
+            <div class="container">
+                <h2>Centres d'Intérêt</h2>
+                <ul class="interests-list">
+                    <li>Cinéma</li>
+                    <li>Voyages</li>
+                    <li>Photographie</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="langues">
+            <div class="container">
+                <h2>Langues</h2>
+                <div class="language-skill">
+                    <h3>Français</h3>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 100%;"></div>
+                    </div>
+                </div>
+                <div class="language-skill">
+                    <h3>Anglais</h3>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="language-skill">
+                    <h3>Espagnol</h3>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 60%;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="cv">
             <div class="container">
-                <h2>Téléchargez mon CV</h2>
-                <p>Vous pouvez télécharger mon CV en cliquant sur le bouton ci-dessous.</p>
-                <a href="CV ALTERNANCE DESIGN UX UI & MARKETING TOM MERGUI_page1.pdf" class="cta-button" download>Télécharger mon CV</a>
-                <a href="https://portfoliotommergui80.my.canva.site/" class="cta-button" target="_blank">Voir mon Portfolio</a>
-                
+                <h2>Téléchargez mon CV et consultez mon Portfolio</h2>
+                <p>Vous pouvez télécharger mon CV et consulter mon portfolio en cliquant sur les boutons ci-dessous.</p>
+                <div class="button-container">
+                    <a href="CV ALTERNANCE DESIGN UX UI & MARKETING TOM MERGUI_page1.pdf" class="cta-button" download target="_blank">Télécharger mon CV</a>
+                </div>
             </div>
         </section>
 
         <section id="contact">
             <div class="container">
                 <h2>Contactez-moi</h2>
-                <p>Email : <a href="mailto:tom.mergui@gmail.com">tom.mergui@gmail.com</a></p>
-                <p>Téléphone : <a href="tel:+0651980917">06 51 98 09 17</a></p>
+                <p>Email : <a href="mailto:tom.mergui@gmail.com" target="_blank">tom.mergui@gmail.com</a></p>
+                <p>Téléphone : <a href="tel:+33651980917" target="_blank">06 51 98 09 17</a></p>
                 <div class="qr-codes">
                     <h3>Pour me contacter ailleurs : </h3>
                     <div class="qr-code">
@@ -170,6 +213,8 @@
             </div>
         </div>
     </footer>
+
+    <button id="scroll-to-top">↑</button>
 
     <script src="script.js"></script>
 </body>
