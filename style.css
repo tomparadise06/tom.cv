@@ -15,16 +15,32 @@ body.dark-mode {
 }
 
 /* Ajout des couleurs pour les niveaux */
-.progress-bar.green .progress {
-    background-color: green;
+.progress-bar.francais .progress {
+    background-color: blue; /* Couleur pour le français */
 }
 
-.progress-bar.orange .progress {
-    background-color: orange;
+.progress-bar.anglais .progress {
+    background-color: red; /* Couleur pour l'anglais */
 }
 
-.progress-bar.red .progress {
-    background-color: red;
+.progress-bar.espagnol .progress {
+    background-color: yellow; /* Couleur pour l'espagnol */
+}
+
+/* Animation */
+@keyframes loadProgress {
+    from {
+        width: 0;
+    }
+    to {
+        width: var(--progress-width);
+    }
+}
+
+.progress {
+    height: 100%;
+    transition: width 0.3s ease;
+    animation: loadProgress 2s ease-out;
 }
 
 /* Autres styles */
@@ -311,8 +327,8 @@ h2 {
 
 .progress {
     height: 100%;
-    background-color: var(--accent-color);
     transition: width 0.3s ease;
+    animation: loadProgress 2s ease-out;
 }
 
 /* CV Section */
