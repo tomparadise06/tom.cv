@@ -16,15 +16,15 @@ body.dark-mode {
 
 /* Ajout des couleurs pour les niveaux */
 .progress-bar.francais .progress {
-    background-color: blue; /* Couleur pour le français */
+    background: linear-gradient(90deg, blue 33%, white 33%, white 66%, red 66%);
 }
 
 .progress-bar.anglais .progress {
-    background-color: red; /* Couleur pour l'anglais */
+    background: linear-gradient(90deg, red 33%, white 33%, white 66%, blue 66%);
 }
 
 .progress-bar.espagnol .progress {
-    background-color: yellow; /* Couleur pour l'espagnol */
+    background: linear-gradient(90deg, #AA151B 50%, #F1BF00 50%);
 }
 
 /* Animation */
