@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav-links');
     const scrollToTopBtn = document.querySelector('#scroll-to-top');
+    const scrollElements = document.querySelectorAll('.scroll-animation');
 
     // Menu burger
     if (burger && nav) {
@@ -19,7 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 behavior: 'smooth'
             });
 
-            // Ferme le menu après un clic sur un lien de navigation
             if (window.innerWidth <= 768) {
                 nav.classList.remove('nav-active');
                 burger.classList.remove('toggle');
@@ -49,8 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Scroll animations
-    const scrollElements = document.querySelectorAll('.scroll-animation');
-
     const elementInView = (el, percentageScroll = 100) => {
         const elementTop = el.getBoundingClientRect().top;
         return (

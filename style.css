@@ -4,6 +4,7 @@
     --text-color: #333333; /* Gris foncé */
     --background-color: #FFFFFF; /* Blanc */
     --accent-color: #FF5A5F; /* Rouge/orange vif */
+    --english-color: darkblue; /* Dark blue for English progress bar */
 }
 
 body.dark-mode {
@@ -14,20 +15,18 @@ body.dark-mode {
     --accent-color: #FF5A5F; /* Rouge/orange vif */
 }
 
-/* Ajout des couleurs pour les niveaux */
 .progress-bar.francais .progress {
     background: linear-gradient(90deg, blue 33%, white 33%, white 66%, red 66%);
 }
 
 .progress-bar.anglais .progress {
-    background: linear-gradient(90deg, red 33%, white 33%, white 66%, blue 66%);
+    background-color: var(--english-color);
 }
 
 .progress-bar.espagnol .progress {
     background: linear-gradient(90deg, #AA151B 50%, #F1BF00 50%);
 }
 
-/* Animation */
 @keyframes loadProgress {
     from {
         width: 0;
@@ -43,7 +42,6 @@ body.dark-mode {
     animation: loadProgress 2s ease-out;
 }
 
-/* Autres styles */
 * {
     margin: 0;
     padding: 0;
@@ -63,7 +61,6 @@ body {
     margin: 0 auto;
 }
 
-/* Navigation */
 #navbar {
     position: fixed;
     width: 100%;
@@ -74,7 +71,7 @@ body {
 
 #navbar .container {
     display: flex;
-    justify-content: center; /* Centre les éléments de la barre de navigation */
+    justify-content: center;
     align-items: center;
     padding: 1rem 0;
 }
@@ -84,7 +81,7 @@ body {
     font-weight: 600;
     color: var(--primary-color);
     text-decoration: none;
-    margin-right: auto; /* Pousse le logo à gauche */
+    margin-right: auto;
 }
 
 .nav-links {
@@ -149,7 +146,6 @@ body {
     width: 100%;
 }
 
-/* Hero Section */
 .hero {
     height: 100vh;
     display: flex;
@@ -183,14 +179,14 @@ body {
     color: white;
     text-decoration: none;
     border-radius: 50px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .cta-button:hover {
     background-color: #e84393;
+    transform: scale(1.1);
 }
 
-/* Sections générales */
 section {
     padding: 5rem 0;
 }
@@ -201,7 +197,6 @@ h2 {
     text-align: center;
 }
 
-/* À Propos */
 .about-content {
     display: flex;
     align-items: center;
@@ -221,7 +216,6 @@ h2 {
     margin-bottom: 1rem;
 }
 
-/* Compétences */
 .skills-list {
     display: flex;
     flex-wrap: wrap;
@@ -245,7 +239,6 @@ h2 {
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-/* Formations */
 .formations-list {
     list-style: none;
 }
@@ -263,7 +256,6 @@ h2 {
     font-size: 1rem;
 }
 
-/* Expériences */
 .experiences-list {
     list-style: none;
 }
@@ -281,7 +273,6 @@ h2 {
     font-size: 1rem;
 }
 
-/* Centres d'Intérêt */
 .interests-list {
     display: flex;
     flex-wrap: wrap;
@@ -306,14 +297,30 @@ h2 {
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-/* Langues */
 .language-skill {
+    display: flex;
+    align-items: center;
     margin-bottom: 1.5rem;
 }
 
-.language-skill h3 {
+.language-skill .flag {
     font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    margin-right: 10px;
+}
+
+.language-skill .progress-bar {
+    position: relative;
+    flex: 1;
+    margin-left: 10px;
+}
+
+.language-skill .percentage {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold;
+    color: var(--text-color);
 }
 
 .progress-bar {
@@ -331,7 +338,6 @@ h2 {
     animation: loadProgress 2s ease-out;
 }
 
-/* CV Section */
 #cv {
     background-color: var(--background-color);
     text-align: center;
@@ -347,7 +353,6 @@ h2 {
     gap: 1rem;
 }
 
-/* Contact Section */
 #contact {
     text-align: center;
     padding: 5rem 0;
@@ -394,7 +399,6 @@ h2 {
     color: white;
 }
 
-/* Footer */
 footer {
     background-color: var(--text-color);
     color: white;
@@ -417,7 +421,6 @@ footer .container {
     text-decoration: none;
 }
 
-/* Bouton pour remonter */
 #scroll-to-top {
     position: fixed;
     bottom: 20px;
@@ -440,7 +443,17 @@ footer .container {
     display: flex;
 }
 
-/* Responsive Design */
+.scroll-animation {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-animation.scrolled {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 @media (max-width: 768px) {
     .nav-links {
         display: none;
@@ -477,7 +490,7 @@ footer .container {
 
     .social-links {
         margin-top: 1rem;
-        justify-content: center; /* Ajouté pour centrer les icônes sur mobile */
+        justify-content: center;
     }
 
     .qr-codes {
