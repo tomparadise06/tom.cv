@@ -1,9 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const languageSkills = document.querySelectorAll('.language-skill');
+
+    languageSkills.forEach(skill => {
+        const level = parseInt(skill.getAttribute('data-level'), 10);
+        const progressBar = skill.querySelector('.progress-bar');
+
+        if (level >= 65) {
+            progressBar.classList.add('green');
+        } else if (level >= 40) {
+            progressBar.classList.add('orange');
+        } else {
+            progressBar.classList.add('red');
+        }
+    });
+
+    // Votre code existant
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav-links');
     const scrollToTopBtn = document.querySelector('#scroll-to-top');
 
-    // Menu burger
     if (burger && nav) {
         burger.addEventListener('click', () => {
             nav.classList.toggle('nav-active');
@@ -11,7 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Smooth scrolling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -19,7 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 behavior: 'smooth'
             });
 
-            // Ferme le menu après un clic sur un lien de navigation
             if (window.innerWidth <= 768) {
                 nav.classList.remove('nav-active');
                 burger.classList.remove('toggle');
@@ -27,7 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // CV download notification
     const downloadButton = document.querySelector('.cta-button[download]');
     if (downloadButton) {
         downloadButton.addEventListener('click', () => {
@@ -35,8 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-
-    // Bouton pour remonter
     window.addEventListener('scroll', () => {
         if (window.scrollY > 300) {
             scrollToTopBtn.classList.add('show');
@@ -49,7 +59,6 @@ document.addEventListener('DOMContentLoaded', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    // Scroll animations
     const scrollElements = document.querySelectorAll('.scroll-animation');
 
     const elementInView = (el, percentageScroll = 100) => {
@@ -82,6 +91,5 @@ document.addEventListener('DOMContentLoaded', () => {
         handleScrollAnimation();
     });
 
-    // Initial call to handleScrollAnimation to handle the elements already in view
     handleScrollAnimation();
 });
