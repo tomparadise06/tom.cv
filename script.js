@@ -93,22 +93,39 @@ document.addEventListener('DOMContentLoaded', () => {
         const message = userInput.value;
         addMessageToChatbox('You', message);
         userInput.value = '';
+        console.log('Message envoyé:', message);
 
-        const response = await fetch('https://api.openai.com/v1/completions', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer sk-proj-osAEt3vw5zqeQqPhhZNOT3BlbkFJMrtnM4juvFL0IjEdcglQ`
-            },
-            body: JSON.stringify({
-                prompt: message,
-                max_tokens: 150
-            }),
-        });
+        try {
+            const response = await fetch('https://api.openai.com/v1/completions', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer sk-proj-184N7uxaofGzzkLT0mPET3BlbkFJbrEJKBuQrXjkYIeV3A4o` // Remplace YOUR_OPENAI_API_KEY par ta clé API
+                },
+                body: JSON.stringify({
+                    model: 'text-davinci-003',
+                    prompt: message,
+                    max_tokens: 150
+                }),
+            });
 
-        const data = await response.json();
-        const reply = data.choices[0].text.trim();
-        addMessageToChatbox('Bot', reply);
+            if (!response.ok) {
+                console.log('Erreur de réseau:', response.statusText);
+                throw new Error('Network response was not ok');
+            }
+
+            const data = await response.json();
+            console.log('Réponse API:', data);
+            if (data.choices && data.choices.length > 0) {
+                const reply = data.choices[0].text.trim();
+                addMessageToChatbox('Bot', reply);
+            } else {
+                addMessageToChatbox('Bot', 'Désolé, je n\'ai pas pu obtenir une réponse.');
+            }
+        } catch (error) {
+            console.error('There was a problem with the fetch operation:', error);
+            addMessageToChatbox('Bot', 'Désolé, je ne peux pas répondre en ce moment.');
+        }
     });
 
     function addMessageToChatbox(sender, message) {
