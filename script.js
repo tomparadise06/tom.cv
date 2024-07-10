@@ -84,3 +84,37 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+document.addEventListener('DOMContentLoaded', () => {
+    const userInput = document.getElementById('user-input');
+    const sendBtn = document.getElementById('send-btn');
+    const chatbox = document.getElementById('chatbox');
+
+    sendBtn.addEventListener('click', async () => {
+        const message = userInput.value;
+        addMessageToChatbox('You', message);
+        userInput.value = '';
+
+        const response = await fetch('https://api.openai.com/v1/engines/davinci-codex/completions', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer sk-proj-osAEt3vw5zqeQqPhhZNOT3BlbkFJMrtnM4juvFL0IjEdcglQ`
+            },
+            body: JSON.stringify({
+                prompt: message,
+                max_tokens: 150
+            }),
+        });
+
+        const data = await response.json();
+        const reply = data.choices[0].text.trim();
+        addMessageToChatbox('Bot', reply);
+    });
+
+    function addMessageToChatbox(sender, message) {
+        const messageElement = document.createElement('div');
+        messageElement.innerHTML = `<strong>${sender}:</strong> ${message}`;
+        chatbox.appendChild(messageElement);
+        chatbox.scrollTop = chatbox.scrollHeight;
+    }
+});
