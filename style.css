@@ -419,6 +419,8 @@ footer .container {
 .social-links a {
     color: white;
     text-decoration: none;
+    font-size: 1.5rem; /* Assure-toi que la taille de la police est suffisante pour les écrans mobiles */
+    margin: 0 0.5rem; /* Ajoute un espace autour des icônes */
 }
 
 #scroll-to-top {
@@ -489,8 +491,10 @@ footer .container {
     }
 
     .social-links {
+        justify-content: center; /* Centre les icônes sur les petits écrans */
         margin-top: 1rem;
-        justify-content: center;
+        display: flex; /* Ajoute Flexbox pour aligner les icônes */
+        gap: 1rem; /* Espace entre les icônes */
     }
 
     .qr-codes {
@@ -498,5 +502,3 @@ footer .container {
         align-items: center;
     }
 }
-  
-
