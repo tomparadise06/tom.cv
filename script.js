@@ -82,3 +82,35 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial call to handleScrollAnimation to handle the elements already in view
     handleScrollAnimation();
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const userInput = document.getElementById('user-input');
+    const sendBtn = document.getElementById('send-btn');
+    const chatbox = document.getElementById('chatbox');
+  
+    sendBtn.addEventListener('click', async () => {
+      const message = userInput.value;
+      addMessageToChatbox('You', message);
+      userInput.value = '';
+  
+      const response = await fetch('https://tom-m-cv-numerique-github-io.vercel.app/api/chat', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ message }),
+      });
+  
+      const data = await response.json();
+      addMessageToChatbox('Bot', data.reply);
+    });
+  
+    function addMessageToChatbox(sender, message) {
+      const messageElement = document.createElement('div');
+      messageElement.innerHTML = `<strong>${sender}:</strong> ${message}`;
+      chatbox.appendChild(messageElement);
+      chatbox.scrollTop = chatbox.scrollHeight;
+    }
+  });
+  
